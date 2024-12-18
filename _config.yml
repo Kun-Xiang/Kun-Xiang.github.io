@@ -166,15 +166,15 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Collections
 # -----------------------------------------------------------------------------
 
-# collections:
-#   news:
-#     defaults:
-#       layout: post
-#     output: true
-#     permalink: /news/:path/
-#   projects:
-#     output: true
-#     permalink: /projects/:path/
+collections:
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /news/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
 
 announcements:
   enabled: true
