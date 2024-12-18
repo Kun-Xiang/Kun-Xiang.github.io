@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: RA @ [HCP_I2 Lab](https://www.sysu-hcp.net/) | Master @ [Sun Yat-sen University](https://ise.sysu.edu.cn/)
+subtitle: RA @ [HCP_I2 Lab](https://www.sysu-hcp.net) | Master @ [Sun Yat-sen University](https://ise.sysu.edu.cn)
 
 profile:
   align: right
   image: xiangkun.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Shenzhen, China</p>
+    <p>     Shenzhen, China</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
