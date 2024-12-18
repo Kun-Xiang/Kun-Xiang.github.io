@@ -74,5 +74,29 @@
     {% include scripts/analytics.html %}
     {% include scripts/progressBar.html %}
     {% include scripts/wechatModal.html %}
+  <script>
+  // 切换显示/隐藏元素
+  function toggle_visibility(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === "none") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
+
+  // 切换图标（箭头）
+  function toggle_chevron(id) {
+    var chevron = document.getElementById(id);
+    if (chevron.classList.contains('fa-chevron-circle-right')) {
+      chevron.classList.remove('fa-chevron-circle-right');
+      chevron.classList.add('fa-chevron-circle-down');
+    } else {
+      chevron.classList.remove('fa-chevron-circle-down');
+      chevron.classList.add('fa-chevron-circle-right');
+    }
+  }
+</script>
+
   </body>
 </html>
