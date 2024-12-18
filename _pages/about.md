@@ -8,7 +8,7 @@ profile:
   image: xiangkun.jpg
   image_circular: true # crops the image to make it circular
   address: >
-    <p>Manhattan, NYC</p>
+    <p>Shenzhen, China</p>
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
