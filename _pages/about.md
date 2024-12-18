@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: RA at [HCP-I2-Lab](https://www.sysu-hcp.net) | Master at [SYSU](https://ise.sysu.edu.cn)
+subtitle: RA @ Prof. Xiaodan Liang](https://lemondan.github.io/) [HCP-I2-Lab](https://www.sysu-hcp.net) | Master at [SYSU](https://ise.sysu.edu.cn)
 
 profile:
   align: right
