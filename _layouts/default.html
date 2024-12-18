@@ -46,7 +46,21 @@
         {{ content }}
       {% endif %}
     </div>
-
+      </div>
+      <center>
+        <!-- <a href="#" onclick="toggle_visibility('notice');" style="text-align:center;font-size:80%;color:#808080">▶ hao-pt.github.io's clustrmaps 🌎</a> -->
+        <script src="https://kit.fontawesome.com/0c7c27ff53.js" crossorigin="anonymous"></script>
+        <a href="#" onclick="toggle_visibility('notice');toggle_chevron('toggle');" style="text-align:center;font-size:80%;color:#989898">
+          <i id="toggle" class="fa fa-chevron-circle-right"></i>
+          quinn777.github.io's clustrmaps 🌎
+        </a>
+        <div id="notice" style="display:none; color:#dedede; font-size:.5em;">
+          <p>
+            <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=KvNoU3PFZLcaP-nRwsi0BCVyvRJNT-Q4X0TfN-PbmBI&cl=ffffff&w=a"></script>
+          </p>
+        </div>
+      </center>
+    </div>
     <!-- Footer -->
     {%- include footer.html %}
 
