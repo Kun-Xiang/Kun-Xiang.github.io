@@ -4,7 +4,7 @@ permalink: /repositories/
 title: repositories
 description: Repository of published papers.
 nav: true
-nav_order: 4
+nav_order: 3
 ---
 
 ## GitHub users
