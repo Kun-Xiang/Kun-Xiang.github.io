@@ -7,7 +7,7 @@ profile:
   align: right
   image: xiangkun.jpg
   image_circular: false # crops the image to make it circular
-  address: >
+  more_info: >
     <p>Shenzhen, China</p>
 
 news: true  # includes a list of news items
