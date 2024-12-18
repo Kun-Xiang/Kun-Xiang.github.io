@@ -6,7 +6,7 @@ subtitle: RA @ HCP-I2-Lab | Master @ Sun Yat-sen University
 profile:
   align: right
   image: xiangkun.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   address: >
     <p>Shenzhen, China</p>
 
