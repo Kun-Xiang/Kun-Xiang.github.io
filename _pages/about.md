@@ -2,16 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: RA @ [HCP Lab](https://www.sysu-hcp.net/) | Master @ [Sun Yat-sen University](https://ise.sysu.edu.cn/)
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Shenzhen, China</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
@@ -19,8 +17,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Thanks for stopping by! 👋
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+# About Me
+I am currently a research assistant at the Human Cyber Physical Intelligence Integration Lab in Sun Yat-sen University advised by [Prof. Xiaodan Liang](https://lemondan.github.io/) on Multimodal Large Language Model. Grounded in data-centric perspective, our work aims to build generalizable AI systems. Previously, I obtained both a Bachelor's and Master's degree in Engineering from the School of Intelligent Engineering at Sun Yat-sen University under the supervision of [Prof. Shancheng Jiang](https://ise.sysu.edu.cn/teacher/teacher02/1415334.htm), concentrating on Trustworthy Machine Learning and Computer Aided Diagnosis System.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Currently, I am interested in the higher-order reasoning abilities of MLLMs. I am working to answer: *1) Does more inference time always result in better performance? 2) How can we search for optimal thinking strategies?*
+
+**Feel free to reach out at xiangk@mail2.sysu.edu.cn to discuss potential collaboration.**
