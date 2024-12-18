@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: RA @ [HCP-I2-Lab](https://www.sysu-hcp.net) | Master @ [SYSU](https://ise.sysu.edu.cn)
+subtitle: RA at [HCP-I2-Lab](https://www.sysu-hcp.net) | Master at [SYSU](https://ise.sysu.edu.cn)
 
 profile:
   align: right
