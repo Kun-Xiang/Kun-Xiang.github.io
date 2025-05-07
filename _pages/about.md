@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: RA @ HCP-I2-Lab | Master @ Sun Yat-sen University
+subtitle: PhD student @ Sun Yat-sen University
 profile:
   align: right
   image: xiangkun.jpg
