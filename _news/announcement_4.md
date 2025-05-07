@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-03-08 16:11:00-0400
+date: 2024-11-18 16:11:00-0400
 inline: true
 related_posts: false
 ---
 
-:fire: We annoinace [AtomThink](https://arxiv.org/pdf/2503.06252), a novel slow thinking framework for multimodal mathematical reasoning task!
+:fire: We annoinace [AtomThink](https://arxiv.org/html/2411.11930v3), a novel slow thinking framework for multimodal mathematical reasoning task!
