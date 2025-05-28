@@ -5,7 +5,7 @@ permalink: /
 subtitle: PhD student @ Sun Yat-sen University
 profile:
   align: right
-  image: assets/xiangkun.jpg
+  image: xiangkun.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Shenzhen, China</p>
