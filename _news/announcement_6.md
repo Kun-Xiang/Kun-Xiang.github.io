@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🔥 We announce [SeePhys](https://arxiv.org/abs/2505.19099), a full spectrum multimodal benchmark for evaluating physics reasoning across different knowledge levels!
+🔥 We release the [paper of SeePhys](https://arxiv.org/abs/2505.19099). It a full spectrum multimodal benchmark for evaluating physics reasoning across different knowledge levels!
