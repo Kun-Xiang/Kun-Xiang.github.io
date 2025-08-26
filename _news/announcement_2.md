@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One paper accepted by AAAI 2024! See you in Washington!
+One paper accepted by AAAI 2024!
