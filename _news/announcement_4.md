@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-We announce [AtomThink](https://arxiv.org/abs/2503.06252), a novel slow thinking framework for multimodal mathematical reasoning task!
+We announce [AtomThink](https://arxiv.org/abs/2411.11930), a novel slow thinking framework for multimodal mathematical reasoning task!
