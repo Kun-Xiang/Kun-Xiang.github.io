@@ -24,6 +24,7 @@ I am currently a PhD student at the [HCP-I2 Lab](https://www.sysu-hcp.net) in Su
 Currently, I am interested in building generalizable multimodal reasoning systems grounded in data-centric perspective. I am working to answer: 
 
 1) **Inward**: How can MLLMs enhance perception and reasoning for real-world comprehension?
+
 2) **Outward**: How can MLLMs enable modeling and interaction for physical engagement?
 
 **Feel free to reach out at xiangk123@gmail.com to discuss potential collaboration.**
