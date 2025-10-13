@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://Quinn777.github.io/sitemap.xml
+Sitemap: https://kun-xiang.github.io//sitemap.xml
