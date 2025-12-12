@@ -1,3 +1,2 @@
-# Homepage
-
-Hi! I am Kun Xiang.
+# Kun Xiang's Homepage
+My personal website.

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MoCLE: Mixture of Cluster-conditional LoRA Experts for Vision-language Instruction Tuning.">
+  <meta name="keywords" content="MoCLE, vlm moe, llava moe, moe llava, moe llm, instruction tuning moe, multimodality, vision-language, vision language">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoCLE: Mixture of Cluster-conditional LoRA Experts for Vision-language Instruction Tuning</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="https://kaichen1998.github.io/images/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://kaichen1998.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Mixture of Cluster-conditional Experts (MoCE) Series
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://gyhdog99.github.io/projects/mocle/">
+            MoCLE (Instruction tuning)
+          </a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2402.05382">
+            MoCE (SSL pre-training v2)
+          </a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2205.13267">
+            SDR (SSL pre-training v1)
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title"><img src="https://kaichen1998.github.io/images/pub/mocle_icon.png" alt="Icon" style="vertical-align: middle;" width="60px" />
+            MoCLE: Mixture of Cluster-conditional LoRA Experts for Vision-language Instruction Tuning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=RYDHIccAAAAJ&view_op=list_works&sortby=pubdate">Yunhao Gou</a><sup>1,2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=FdR09jsAAAAJ&hl=zh-TW">Zhili Liu</a><sup>2,3*</sup>,</span>
+            <span class="author-block">
+              <a href="https://kaichen1998.github.io/">Kai Chen</a><sup>2*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.sg/citations?user=2p7x6OUAAAAJ&hl=en">Lanqing Hong</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://xuhangcn.github.io/">Hang Xu</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://dblp.org/pid/152/6095.html">Aoxue Li</a><sup>3</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/dyyeung">Dit-Yan Yeung</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cse.ust.hk/~jamesk/">James T. Kwok</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a><sup>1,4†</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Southern University of Science and Technology,</span>
+            <span class="author-block"><sup>2</sup>Hong Kong University of Science and Technology,</span>
+            <span class="author-block"><sup>3</sup>Huawei Noah's Ark Lab</span>
+            <span class="author-block"><sup>4</sup>Peng Cheng Laboratory</span>
+          </div>
+
+          <span class="author-block">(<sup>*</sup>Equal contribution.
+          <sup><span>†</span></sup>Corresponding author.
+          )</span>
+  
+
+                <h4 class="column has-text-centered">
+                  🔥<span style="color: #ff3860"><i><u><b>First MLLM with MoE for instruction customization and generalization!</b></u></i></span> 
+                </h4>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2312.12379.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Arxiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.12379"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/gyhdog99/mocle"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- HuggingFace Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/KaiChen1998/mocle-66135eb69c0d0687a15ec671"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>HuggingFace</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Instruction tuning of Large Vision-language Models has revolutionized the development of versatile models with zero-shot generalization across a wide range of downstream vision-language tasks.
+            However, diversity of training tasks of different sources and formats would lead to inevitable task conflicts, where different tasks conflicts for the same set of model parameters, resulting in the sub-optimal instruction-following abilities.
+          </p>
+          <p>
+            To address that, we propose the Mixture of Cluster-conditional LoRA Experts (MoCLE), a novel Mixture of Experts (MoE) architecture designed to activate the task-customized model parameters based on the instruction clusters. 
+            A separate universal expert is further incorporated to improve the generalization capabilities of MoCLE for novel instructions.
+            Extensive experiments on 11 zero-shot tasks demonstrate the effectiveness of MoCLE.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section" style="background-color: #f1f1f1;">
+  <div class="container is-max-desktop">
+    <!-- conflicts. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Task Conflicts in MLLM Instruction Tuning</h2>
+        <div class="teaser">
+          <img src="./static/images/preliminary.png">
+        </div>  
+        <div class="content has-text-justified">
+          <p>
+            Only 2 out of 7 tasks benefit from instruction tuning from all the
+            data, while the task experts show better performance on the other
+            5 tasks (i.e., Flickr 30K, GQA, HM, SciQA and IconQA).
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ conflicts. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Cluster-conditional LoRA MoE w/ Universal Expert</h2>
+        <div class="teaser">
+          <img src="./static/images/method.PNG">
+        </div>  
+        <div class="content has-text-justified">
+          <p>
+          We cluster the training instruction data into 64 groups, the expert routing is decided by the cluster embedding of the data.
+          At each layer of the LLM, the input tokens are handled by 3 modules, the universal expert (promote instruction generalization), activated LoRA experts (avoide task conflicts), and the linear module of the
+          LLM. 
+        </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+
+<section class="section" style="background-color: #f1f1f1;">
+  <div class="container is-max-desktop">
+    <!-- routing. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-fifths">
+        <h2 class="title is-3">Expert Task Specialization</h2>
+        <div class="teaser">
+          <img src="./static/images/routing.png">
+        </div>  
+        <div class="content has-text-centered">
+          <p>(a): MoCLE exhibits task specialization across different experts. <br >(b): Naive Sentence MoE shows uniform routing decisions. </p>
+        </div>
+      </div>
+    </div>
+    <!--/ routing. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- dialogs. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Qualitative Comparison</h2>
+        <div class="teaser">
+          <img src="./static/images/dialog.PNG">
+        </div>  
+        <div class="content has-text-justified">
+          <p>(Left) MoCLE demonstrates better OCR abilities. (Middle & Right) InstructBLIP is overwhelmed by the image caption tasks (giving short response) while our MoCLE better follows users instructions.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ dialogs. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX" style="background-color: #f1f1f1;">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{gou2023mixture,
+      title={Mixture of Cluster-conditional LoRA Experts for Vision-language Instruction Tuning},
+      author={Gou, Yunhao and Liu, Zhili and Chen, Kai and Hong, Lanqing and Xu, Hang and Li, Aoxue and Yeung, Dit-Yan and Kwok, James T and Zhang, Yu},
+      journal={arXiv preprint arXiv:2312.12379},
+      year={2023}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+          </p><center>The website template was adapted from <a href="https://nerfies.github.io/">Nerfies</a>. We thank the authors for sharing the templates.</center>
+        <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
