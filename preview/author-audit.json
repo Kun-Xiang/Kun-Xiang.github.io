@@ -1,0 +1,512 @@
+{
+  "checkedAt": "2026-10-26",
+  "scope": "Authorship and contribution markers only. Full technical papers were not reviewed.",
+  "records": [
+    {
+      "id": "rynnunify",
+      "title": "RynnUnify: Towards Unified Embodied Brain",
+      "status": "pdf-verified",
+      "authors": [
+        "Minghao Zhu",
+        "Bohan Hou",
+        "Kun Xiang",
+        "Zixuan Wang",
+        "Yinzhou Tang",
+        "Yifei Yang",
+        "Zhikai Wang",
+        "Tianyi Zhang",
+        "Kehan Li",
+        "Haoyu Zhao",
+        "Siteng Huang",
+        "Leigang Qu",
+        "Sicong Leng",
+        "Dongchi Huang",
+        "Mingxiu Chen",
+        "Shijian Lu",
+        "Yue Wang",
+        "Xiaodan Liang",
+        "Zhenyu Zeng",
+        "Deli Zhao",
+        "Chengju Liu",
+        "Jianfei Yang",
+        "Xin Li"
+      ],
+      "contribution": {
+        "kind": "core",
+        "authors": [
+          "Minghao Zhu",
+          "Bohan Hou",
+          "Kun Xiang",
+          "Zixuan Wang",
+          "Yinzhou Tang",
+          "Yifei Yang",
+          "Zhikai Wang",
+          "Tianyi Zhang",
+          "Kehan Li"
+        ]
+      },
+      "evidence": "Page 1 author block: asterisks identify the first nine authors as core contributors; project leaders and corresponding authors use different symbols.",
+      "source": "https://arxiv.org/pdf/2610.32965v1",
+      "version": "arXiv:2610.32965v1",
+      "sha256": "3ea54d3b38bef4a6e88dc9eb32e94034863f28314034951acfa6848f8e8dcc96",
+      "page": 1
+    },
+    {
+      "id": "geothinker-f",
+      "title": "GeoThinker-F: Endogenous Predictive World Representations for Fast Spatial Intelligence",
+      "status": "pdf-verified",
+      "authors": [
+        "Haoyuan Li",
+        "Qihang Cao",
+        "Huanyuan Zhou",
+        "Xin Hu",
+        "Sijia Chen",
+        "Zihan Guo",
+        "Kun Xiang",
+        "Yunshuang Nie",
+        "Tao Tang",
+        "Xinlong Zheng",
+        "Jia-Wang Bian",
+        "Xianming Liu",
+        "Xiaodan Liang"
+      ],
+      "contribution": {
+        "kind": "equal",
+        "authors": [
+          "Haoyuan Li",
+          "Qihang Cao"
+        ]
+      },
+      "evidence": "Page 1: the first two authors carry asterisks; the bottom footnote defines equal contribution. Kun Xiang has only an affiliation number.",
+      "source": "https://arxiv.org/pdf/2610.20592v1",
+      "version": "arXiv:2610.20592v1",
+      "sha256": "3e1a9400d50ed7461694a580157a2cb2aa8a4b5d4add41df14881ae4991c9e93",
+      "page": 1
+    },
+    {
+      "id": "l2t",
+      "title": "Adaptive Look, Flexible Thought: Learning How and How Long to Think in Multimodal Reasoning",
+      "status": "pdf-verified",
+      "authors": [
+        "Quanlin Chen",
+        "Xiuwei Chen",
+        "Kun Xiang",
+        "Zehua Ma",
+        "Chunjin Ye",
+        "Boqiang Guo",
+        "Xianming Liu",
+        "Xiaodan Liang"
+      ],
+      "contribution": null,
+      "evidence": "Page 1: no equal-contribution or core-contributor designation. Asterisks mark Xianming Liu and Xiaodan Liang as corresponding authors.",
+      "source": "https://arxiv.org/pdf/2610.15810v1",
+      "version": "arXiv:2610.15810v1",
+      "sha256": "7d3b8d2ff85855f8ca7194638e3fb4edf0fd5450b3d1bb5c5150f37ed0d77230",
+      "page": 1
+    },
+    {
+      "id": "vr-jepa",
+      "title": "VR-JEPA: Learning Contrastive-State Latent Guidance for Generation-based Video Reasoning",
+      "status": "pdf-verified",
+      "authors": [
+        "Zehua Ma",
+        "Kun Xiang",
+        "Yunshuang Nie",
+        "Quanlin Chen",
+        "Haoyuan Li",
+        "Xiuwei Chen",
+        "Jiang Ji",
+        "Haijun Wu",
+        "Zhenyu Xie",
+        "Michael Kampffmeyer",
+        "Hanhui Li",
+        "Xiaodan Liang"
+      ],
+      "contribution": {
+        "kind": "equal",
+        "authors": [
+          "Zehua Ma",
+          "Kun Xiang"
+        ]
+      },
+      "evidence": "Page 1: Zehua Ma and Kun Xiang have asterisks; the bottom footnote says both authors contributed equally.",
+      "source": "https://arxiv.org/pdf/2609.40129v1",
+      "version": "arXiv:2609.40129v1",
+      "sha256": "c2a42691cf2ff8a65262f3143c1eef7487a5035e31c06a5816ef4373901d8689",
+      "page": 1
+    },
+    {
+      "id": "bee",
+      "title": "Beyond the Eye: Efficient Multimodal Reasoning via Self-Regulated Implicit Visual Tools",
+      "status": "pdf-verified",
+      "authors": [
+        "Xiuwei Chen",
+        "Quanlin Chen",
+        "Wentao Hu",
+        "Zisheng Chen",
+        "Kun Xiang",
+        "Zehua Ma",
+        "Mingyang Zhang",
+        "Jianhua Han",
+        "Hanhui Li",
+        "Hang Xu",
+        "Xiaodan Liang"
+      ],
+      "contribution": null,
+      "evidence": "Page 1: no equal-contribution or core-contributor designation. The dagger marks Xiaodan Liang as corresponding author.",
+      "source": "https://arxiv.org/pdf/2607.11106v1",
+      "version": "arXiv:2607.11106v1",
+      "sha256": "675b4b87ed7c894f066bd85c6e075cbd18ac9804a7f7f0b56b3bb7a21bd962ad",
+      "page": 1
+    },
+    {
+      "id": "eva",
+      "title": "Latent Visual States for Efficient Multimodal Reasoning",
+      "status": "pdf-verified",
+      "authors": [
+        "Xiuwei Chen",
+        "Wentao Hu",
+        "Yongxin Wang",
+        "Zisheng Chen",
+        "Likui Zhang",
+        "Kun Xiang",
+        "Jianhua Han",
+        "Hui-Ling Zhen",
+        "Jingyuan Zou",
+        "Hang Xu",
+        "Xiaodan Liang"
+      ],
+      "contribution": null,
+      "evidence": "Page 1: no equal-contribution or core-contributor designation. The asterisk marks Xiaodan Liang as corresponding author.",
+      "source": "https://arxiv.org/pdf/2606.24233v1",
+      "version": "arXiv:2606.24233v1",
+      "sha256": "d0ae192b2af679ab23e6f160abd27211786a89f0c40afc448a67025405ba6d33",
+      "page": 1
+    },
+    {
+      "id": "physicalai",
+      "title": "Aligning Perception, Reasoning, Modeling and Interaction: A Survey on Physical AI",
+      "status": "pdf-verified",
+      "authors": [
+        "Kun Xiang",
+        "Terry Jingchen Zhang",
+        "Yinya Huang",
+        "Jixi He",
+        "Zirong Liu",
+        "Yueling Tang",
+        "Ruizhe Zhou",
+        "Lijing Luo",
+        "Youpeng Wen",
+        "Xiuwei Chen",
+        "Bingqian Lin",
+        "Jianhua Han",
+        "Hang Xu",
+        "Hanhui Li",
+        "Bin Dong",
+        "Xiaodan Liang"
+      ],
+      "contribution": {
+        "kind": "equal",
+        "authors": [
+          "Kun Xiang",
+          "Terry Jingchen Zhang",
+          "Yinya Huang"
+        ]
+      },
+      "evidence": "Page 1: the first three authors have asterisks; the left-column footnote defines equal contribution.",
+      "source": "https://arxiv.org/pdf/2510.04978v5",
+      "version": "arXiv:2510.04978v5",
+      "sha256": "ea83a48336af4f1039f018914386359a6f6014af92a02219b1dcaf9cb8fec527",
+      "page": 1
+    },
+    {
+      "id": "seephyspro",
+      "title": "SeePhys Pro: Diagnosing Modality Transfer and Blind-Training Effects in Multimodal RLVR for Physics Reasoning",
+      "status": "pdf-verified",
+      "authors": [
+        "Kun Xiang",
+        "Terry Jingchen Zhang",
+        "Zirong Liu",
+        "Bokai Zhou",
+        "Yueling Tang",
+        "Junjie Yu",
+        "Jiacong Lu",
+        "Shangrui Huang",
+        "Heng Li",
+        "Likui Zhang",
+        "Kunkun Liu",
+        "Changzheng Zhang",
+        "Yangle Fang",
+        "Boqiang Guo",
+        "Hui-Ling Zhen",
+        "Dandan Tu",
+        "Yinya Huang",
+        "Xiaodan Liang"
+      ],
+      "contribution": null,
+      "evidence": "Page 1 of v2: no equal-contribution or core-contributor designation. The asterisks mark Dandan Tu and Xiaodan Liang as corresponding authors.",
+      "source": "https://arxiv.org/pdf/2605.09266v2",
+      "version": "arXiv:2605.09266v2",
+      "sha256": "51c837fdaa49d10470d8f2ba445d8cd1f5051f3c905564726fd5e2326efcfc93",
+      "page": 1
+    },
+    {
+      "id": "radar",
+      "title": "RADAR: Revealing Asymmetric Development of Abilities in MLLM Pre-training",
+      "status": "pdf-verified",
+      "authors": [
+        "Yunshuang Nie",
+        "Bingqian Lin",
+        "Minzhe Niu",
+        "Kun Xiang",
+        "Jianhua Han",
+        "Guowei Huang",
+        "Xingyue Quan",
+        "Hang Xu",
+        "Bokui Chen",
+        "Xiaodan Liang"
+      ],
+      "contribution": null,
+      "evidence": "Page 1: no equal-contribution or core-contributor designation. Daggers mark Bokui Chen and Xiaodan Liang as corresponding authors.",
+      "source": "https://arxiv.org/pdf/2602.12892v1",
+      "version": "arXiv:2602.12892v1",
+      "sha256": "6f05e542cc059419f4b0275d81331447513eb0ed2a0f015669f210c2bd84663c",
+      "page": 1
+    },
+    {
+      "id": "geothinker",
+      "title": "Thinking with Geometry: Active Geometry Integration for Spatial Reasoning",
+      "status": "pdf-verified",
+      "authors": [
+        "Haoyuan Li",
+        "Qihang Cao",
+        "Tao Tang",
+        "Kun Xiang",
+        "Zihan Guo",
+        "Jianhua Han",
+        "JiaWang Bian",
+        "Hang Xu",
+        "Xiaodan Liang"
+      ],
+      "contribution": {
+        "kind": "equal",
+        "authors": [
+          "Haoyuan Li",
+          "Qihang Cao"
+        ]
+      },
+      "evidence": "Page 1 of v5: the first two authors have asterisks; the bottom-left footnote defines equal contribution. Kun Xiang has only an affiliation number.",
+      "source": "https://arxiv.org/pdf/2602.06037v5",
+      "version": "arXiv:2602.06037v5",
+      "sha256": "9dceec3124e2612c4a2ee9629fc52755cdaf7221366e58af9543ee1e73cdc81a",
+      "page": 1
+    },
+    {
+      "id": "atomthink",
+      "title": "AtomThink: Multimodal Slow Thinking with Atomic Step Reasoning",
+      "status": "pdf-verified",
+      "authors": [
+        "Kun Xiang",
+        "Zhili Liu",
+        "Terry Jingchen Zhang",
+        "Yinya Huang",
+        "Yunshuang Nie",
+        "Kaixin Cai",
+        "Yiyang Yin",
+        "Runhui Huang",
+        "Hanhui Li",
+        "Yihan Zeng",
+        "Yu-Jie Yuan",
+        "Jianhua Han",
+        "Lanqing Hong",
+        "Hang Xu",
+        "Xiaodan Liang"
+      ],
+      "contribution": {
+        "kind": "equal",
+        "authors": [
+          "Kun Xiang",
+          "Zhili Liu"
+        ]
+      },
+      "evidence": "Page 1 of v5: Kun Xiang and Zhili Liu have asterisks; the left-column footnote defines equal contribution.",
+      "source": "https://arxiv.org/pdf/2411.11930v5",
+      "version": "arXiv:2411.11930v5",
+      "sha256": "38e01a934bc453c9c1ad01c9a9b730864115fe85b0bbd31298c7bf9c2c4d3864",
+      "page": 1
+    },
+    {
+      "id": "seephys",
+      "title": "SeePhys: Does Seeing Help Thinking? – Benchmarking Vision-Based Physics Reasoning",
+      "status": "pdf-verified",
+      "authors": [
+        "Kun Xiang",
+        "Heng Li",
+        "Terry Jingchen Zhang",
+        "Yinya Huang",
+        "Zirong Liu",
+        "Peixin Qu",
+        "Jixi He",
+        "Jiaqi Chen",
+        "Yu-Jie Yuan",
+        "Jianhua Han",
+        "Hang Xu",
+        "Hanhui Li",
+        "Mrinmaya Sachan",
+        "Xiaodan Liang"
+      ],
+      "contribution": {
+        "kind": "equal",
+        "authors": [
+          "Kun Xiang",
+          "Heng Li",
+          "Terry Jingchen Zhang",
+          "Yinya Huang"
+        ]
+      },
+      "evidence": "Page 1 of v8: the first four authors have asterisks; the bottom footnote defines equal contribution.",
+      "source": "https://arxiv.org/pdf/2505.19099v8",
+      "version": "arXiv:2505.19099v8",
+      "sha256": "068e937366d1aa5095235389727af791a560a975c707aac319361a4bb7dac4eb",
+      "page": 1
+    },
+    {
+      "id": "emova",
+      "title": "EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions",
+      "status": "pdf-verified",
+      "authors": [
+        "Kai Chen",
+        "Yunhao Gou",
+        "Runhui Huang",
+        "Zhili Liu",
+        "Daxin Tan",
+        "Jing Xu",
+        "Chunwei Wang",
+        "Yi Zhu",
+        "Yihan Zeng",
+        "Kuo Yang",
+        "Dingdong Wang",
+        "Kun Xiang",
+        "Haoyuan Li",
+        "Haoli Bai",
+        "Jianhua Han",
+        "Xiaohui Li",
+        "Weike Jin",
+        "Nian Xie",
+        "Yu Zhang",
+        "James T. Kwok",
+        "Hengshuang Zhao",
+        "Xiaodan Liang",
+        "Dit-Yan Yeung",
+        "Xiao Chen",
+        "Zhenguo Li",
+        "Wei Zhang",
+        "Qun Liu",
+        "Jun Yao",
+        "Lanqing Hong",
+        "Lu Hou",
+        "Hang Xu"
+      ],
+      "contribution": {
+        "kind": "equal",
+        "authors": [
+          "Kai Chen",
+          "Yunhao Gou",
+          "Runhui Huang",
+          "Zhili Liu",
+          "Daxin Tan"
+        ]
+      },
+      "evidence": "Page 1 of v4: the first five authors have asterisks; the footnote specifies equal contribution, in alphabetical order by surname. Kun Xiang is twelfth and unmarked.",
+      "source": "https://arxiv.org/pdf/2409.18042v4",
+      "version": "arXiv:2409.18042v4",
+      "sha256": "42b97fefc0ebeb2b10d310abc4e1b6966325d1913ff4d51675e19709966ef306",
+      "page": 1
+    },
+    {
+      "id": "physics-physical-position",
+      "title": "Position: The Physics-Physical Reasoning Interplay is Key for Future Embodied World Models",
+      "status": "indexed-pdf-text-checked",
+      "authors": [
+        "Terry Jingchen Zhang",
+        "Kun Xiang",
+        "Yinya Huang",
+        "Jixi He",
+        "Zirong Liu",
+        "Yueling Tang",
+        "Ruizhe Zhou",
+        "Chengyu Yu",
+        "Xiaodan Liang"
+      ],
+      "contribution": {
+        "kind": "equal",
+        "authors": [
+          "Terry Jingchen Zhang",
+          "Kun Xiang",
+          "Yinya Huang"
+        ]
+      },
+      "evidence": "The indexed text of the official OpenReview PDF shows three leading asterisks and an equal-contribution footnote. Live PDF retrieval is blocked by OpenReview verification; the existing three-name marking is retained.",
+      "source": "https://openreview.net/forum?id=XF7kHMLdWX"
+    },
+    {
+      "id": "mmk-dro",
+      "title": "A prior knowledge-guided distributionally robust optimization-based adversarial training strategy for medical image classification",
+      "status": "pending-pdf",
+      "authors": [
+        "Shancheng Jiang",
+        "Zehui Wu",
+        "Haiqiong Yang",
+        "Kun Xiang",
+        "Weiping Ding",
+        "Zhen-Song Chen"
+      ],
+      "contribution": null,
+      "evidence": "Unresolved: publisher PDF requests returned a verification page; the publisher API exposed bibliographic metadata only. No contribution marking is inferred from author order or Crossref. Existing unmarked display is retained pending the PDF.",
+      "source": "https://doi.org/10.1016/j.ins.2024.120705"
+    },
+    {
+      "id": "cap",
+      "title": "Toward robust diagnosis: A contour attention preserving adversarial defense for covid-19 detection",
+      "status": "pdf-verified",
+      "authors": [
+        "Kun Xiang",
+        "Xing Zhang",
+        "Jinwen She",
+        "Jinpeng Liu",
+        "Haohan Wang",
+        "Shiqi Deng",
+        "Shancheng Jiang"
+      ],
+      "contribution": {
+        "kind": "equal",
+        "authors": [
+          "Kun Xiang",
+          "Xing Zhang"
+        ]
+      },
+      "evidence": "Page 1: Kun Xiang and Xing Zhang have asterisks; the bottom-left footnote defines equal contribution.",
+      "source": "https://arxiv.org/pdf/2211.16806v1",
+      "version": "arXiv:2211.16806v1",
+      "sha256": "bb3b45f21de0d8cb9c6e9ff868a3e0ac6eddee37726c4bda1f83b1b47ff21617",
+      "page": 1
+    },
+    {
+      "id": "pruning",
+      "title": "A novel weight pruning strategy for light weight neural networks with application to the diagnosis of skin disease",
+      "status": "pending-pdf",
+      "authors": [
+        "Kun Xiang",
+        "Linlin Peng",
+        "Haiqiong Yang",
+        "Mingxin Li",
+        "Zhongfa Cao",
+        "Shancheng Jiang",
+        "Gang Qu"
+      ],
+      "contribution": null,
+      "evidence": "Unresolved: the indexed publisher page contains an equal-contribution footnote numbered 1, but omits the author-to-footnote mapping. PDF requests returned a verification page. Crossref confirms the seven names, not their contribution markers. No names are assigned asterisks pending the PDF.",
+      "source": "https://www.sciencedirect.com/science/article/abs/pii/S1568494621006281"
+    }
+  ]
+}

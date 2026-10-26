@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360">
+  <rect width="600" height="360" fill="#101c2a"/>
+  <g fill="none" stroke="#9bbecf" stroke-width="1.5" opacity=".7">
+    <circle cx="455" cy="180" r="104"/><circle cx="455" cy="180" r="69"/>
+    <path d="M350 180h210M455 76v208M382 107l146 146M382 253l146-146" opacity=".35"/>
+    <path d="M382 112a104 104 0 0 1 157 11M528 248a104 104 0 0 1-157-11" stroke="#d9c394" stroke-width="4"/>
+  </g>
+  <g fill="#d9c394"><circle cx="455" cy="111" r="8"/><circle cx="515" cy="214" r="8"/><circle cx="395" cy="214" r="8"/></g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#f3f6f6">
+    <text x="40" y="170" font-size="61" letter-spacing="-3">RynnUnify</text>
+    <text x="43" y="213" font-size="23" fill="#bfcfd9">Reason. Imagine. Act.</text>
+  </g>
+</svg>

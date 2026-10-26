@@ -1,0 +1,6 @@
+{
+  "points": 220000,
+  "file": "ringed-planet.points.bin",
+  "description": "Original procedural ringed planet for Kun Xiang's homepage",
+  "generator": "generate-planet.py; deterministic sphere and annular surfaces"
+}

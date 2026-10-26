@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      name="description"
+      content="Kun Xiang, PhD candidate at Sun Yat-sen University. Multimodal reasoning, Physical AI, and agentic reinforcement learning."
+    />
+    <title>Kun Xiang · Research</title>
+    <script>
+      history.scrollRestoration = "manual";
+      if (location.protocol === "file:")
+        location.replace("http://127.0.0.1:4321/preview/");
+    </script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/BricolageGrotesque-VF.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="vendor/orocoa/vi/tokens.css" />
+    <link rel="stylesheet" href="vendor/orocoa/home/style.css" />
+    <link rel="stylesheet" href="vendor/orocoa/fields/fields.css" />
+    <link
+      rel="stylesheet"
+      href="vendor/orocoa/assets/catalog/vendor/lenis.css"
+    />
+    <link rel="stylesheet" href="site.css?v=20261026-two-blue-lines" />
+    <script type="importmap">
+      {"imports":{"./vendor/orocoa/home/pointcloud.js":"./vendor/orocoa/home/pointcloud.js?v=20261026-flow2"}}
+    </script>
+    <script type="module" src="app.js?v=20261026-publish"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#about">Skip to content</a>
+    <header class="site-header" id="site-header" inert>
+      <a class="wordmark" href="#home">Kun Xiang<span>RESEARCH</span></a>
+      <nav class="main-nav" aria-label="Main navigation" id="main-nav">
+        <a href="#about">About</a><a href="#updates">Updates</a
+        ><a href="#research">Research</a><a href="#publications">Publications</a
+        ><a href="#contact">Contact</a>
+      </nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span></span><span></span>
+      </button>
+    </header>
+    <main>
+      <div id="journey">
+        <div class="journey-viewport">
+          <section class="homepage" id="home" aria-label="Kun Xiang homepage">
+            <div
+              id="stage"
+              aria-label="An interactive point cloud of a ringed planet"
+            >
+              <canvas
+                id="cloud"
+                role="img"
+                aria-label="A large ringed planet in silver and ice-blue light. Move the pointer to scatter its particles; they return when movement stops."
+              ></canvas>
+              <p id="status" role="status">Loading the point cloud…</p>
+            </div>
+            <div id="greeting" class="greeting" data-language="en">
+              <h1 id="heading">
+                <span class="hello">Hello,</span
+                ><span class="name">I'm Kun Xiang.</span>
+              </h1>
+            </div>
+            <nav class="home-nav" aria-label="Explore this site">
+              <a href="#about">About</a><a href="#research">Work</a
+              ><a href="#publications">Papers</a>
+            </nav>
+            <div class="home-footer">
+              <button
+                id="motion-toggle"
+                type="button"
+                aria-label="Pause point cloud animation"
+                aria-pressed="false"
+              >
+                <span aria-hidden="true">Ⅱ</span>
+              </button>
+            </div>
+            <a class="enter-fields" href="#about"
+              ><span id="explore-label">SCROLL TO EXPLORE</span
+              ><span aria-hidden="true">↓</span></a
+            >
+          </section>
+          <section
+            id="about"
+            class="about-opening"
+            aria-labelledby="about-title"
+            inert
+          >
+            <div class="section-kicker">
+              <span>01 / A LITTLE ABOUT ME</span><span>GUANGZHOU, CHINA</span>
+            </div>
+            <div class="about-grid">
+              <div class="about-heading">
+                <h2 id="about-title">
+                  <span class="about-title-line">Building the</span>
+                  <span class="about-title-line">Reasoning Foundation</span>
+                  <span class="about-title-line">of Physical AI</span>
+                </h2>
+                <a class="text-link" href="#contact"
+                  ><span>Let’s exchange ideas</span
+                  ><span aria-hidden="true">↗</span></a
+                >
+              </div>
+              <div class="about-copy">
+                <figure class="portrait">
+                  <img
+                    src="../images/profile.png"
+                    alt="Portrait of Kun Xiang"
+                    width="1484"
+                    height="1380"
+                    loading="lazy"
+                  />
+                </figure>
+                <p class="large-copy">
+                  I’m Kun Xiang (项鲲), a PhD candidate at Sun Yat-sen
+                  University. I work on AI that can reason about the physical
+                  world and learn by interacting with it.
+                </p>
+                <p>
+                  <span>I am advised by</span>
+                  <a
+                    href="https://lemondan.github.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Prof. Xiaodan Liang</a
+                  ><span>
+                    and am currently a research intern at Alibaba DAMO
+                    Academy.</span
+                  >
+                </p>
+                <p>
+                  My research connects multimodal reasoning, physical world
+                  modeling, and agentic reinforcement learning. I explore how
+                  models interpret visual evidence, adapt the depth of their
+                  reasoning, and refine their decisions through feedback.
+                </p>
+              </div>
+            </div>
+            <section class="research-directions" aria-labelledby="directions-title">
+              <h3 class="eyebrow" id="directions-title">RESEARCH DIRECTIONS</h3>
+              <div class="questions">
+                <article class="question">
+                  <h4><span class="question-index">01</span>Multimodal reasoning</h4>
+                  <p>Choosing what to inspect, how long to think, and when to verify an answer.</p>
+                </article>
+                <article class="question">
+                  <h4><span class="question-index">02</span>Physical world learning</h4>
+                  <p>Learning physical structure, dynamics, and laws from observation, simulation, and interaction.</p>
+                </article>
+                <article class="question">
+                  <h4><span class="question-index">03</span>Agentic RL</h4>
+                  <p>Learning to plan, use tools, and improve decisions through reinforcement learning.</p>
+                </article>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+      <section
+        class="updates section-pad"
+        id="updates"
+        aria-labelledby="updates-title"
+      >
+        <div class="section-kicker">
+          <span>02 / RECENT UPDATES</span>
+        </div>
+        <div class="updates-grid">
+          <h2 id="updates-title">Recent updates.</h2>
+          <div class="news-list">
+            <a class="news-item" href="https://github.com/alibaba-damo-academy/RynnUnify" target="_blank" rel="noopener noreferrer">
+              <time datetime="2026-10">2026.10</time>
+              <p>We released RynnUnify for embodied understanding, visual planning, and agentic reasoning.</p>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="news-item" href="https://arxiv.org/abs/2607.11106" target="_blank" rel="noopener noreferrer">
+              <time datetime="2026-10">2026.10</time>
+              <p>One paper was accepted by TPAMI.</p>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="news-item" href="#publications">
+              <time datetime="2026-10">2026.10</time>
+              <p>We released L2T and GeoThinker-F for adaptive multimodal reasoning and fast spatial intelligence.</p>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="news-item"
+              href="https://arxiv.org/abs/2510.04978"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><time datetime="2026-06">2026.06</time>
+              <p>One paper was accepted by TPAMI.</p>
+              <span aria-hidden="true">↗</span></a
+            >
+            <a
+              class="news-item"
+              href="https://seephyspro.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><time datetime="2026-05">2026.05</time>
+              <p>We released SeePhys Pro for diagnosing multimodal physics reasoning.</p>
+              <span aria-hidden="true">↗</span></a
+            >
+            <a
+              class="news-item"
+              href="https://ai4math2026.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><time datetime="2026-03">2026.03</time>
+              <p>Our 3rd AI for Math Workshop was accepted by ICML 2026.</p>
+              <span aria-hidden="true">↗</span></a
+            >
+            <a
+              class="news-item"
+              href="https://arxiv.org/abs/2411.11930"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><time datetime="2026-01">2026.01</time>
+              <p>One paper was accepted by TPAMI.</p>
+              <span aria-hidden="true">↗</span></a
+            >
+            <div class="older-news" id="older-news" hidden>
+              <a
+                class="news-item"
+                href="https://github.com/AI4Phys/Awesome-AI-for-Physics"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><time datetime="2025-10">2025.10</time>
+                <p>We released our Physical AI survey on arXiv.</p>
+                <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="news-item"
+                href="https://seephys.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><time datetime="2025-09">2025.09</time>
+                <p>One paper was accepted by NeurIPS 2025.</p>
+                <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="news-item"
+                href="https://huggingface.co/datasets/SeePhys/SeePhys"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><time datetime="2025-05">2025.05</time>
+                <p>We released the SeePhys code and dataset.</p>
+                <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="news-item"
+                href="https://arxiv.org/abs/2505.19099"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><time datetime="2025-05">2025.05</time>
+                <p>We released SeePhys for vision-based physics reasoning.</p>
+                <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="news-item"
+                href="https://sites.google.com/view/ai4mathworkshopicml2025/challenge"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><time datetime="2025-05">2025.05</time>
+                <p>We released the SeePhys challenge for the 2nd AI for Math Workshop at ICML 2025.</p>
+                <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="news-item"
+                href="https://github.com/Kun-Xiang/AtomThink"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><time datetime="2024-12">2024.12</time>
+                <p>We released AtomThink for multimodal mathematical reasoning.</p>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <button
+              class="text-link news-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="older-news"
+            >
+              <span>Earlier updates</span><span aria-hidden="true">＋</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        id="research"
+        class="fields selected-work"
+        aria-labelledby="fields-title"
+        lang="en"
+      >
+        <div class="fields-layout">
+          <p class="selected-work-label">03 / SELECTED RESEARCH</p>
+          <div class="research-intro">
+            <header class="fields-header">
+              <h2 id="fields-title">Research highlights.</h2>
+            </header>
+            <a class="all-work" href="#publications"
+              ><span class="all-work-label">All publications</span
+              ><span class="vi-icon" aria-hidden="true">↗</span></a
+            >
+          </div>
+          <nav class="field-grid" aria-label="Selected research">
+            <a class="field" data-project="rynnunify" href="#research" aria-label="Explore RynnUnify">
+              <span class="field-number" aria-hidden="true">01</span>
+              <div class="field-content">
+                <h3 class="field-title">RynnUnify</h3>
+                <p class="field-description"><span class="field-copy-line">Reason with imagined futures.</span><span class="field-copy-line">Plan beyond the current frame.</span></p>
+                <span class="field-venue">Technical report · 2026</span>
+              </div>
+              <div class="field-image"><img src="assets/research-rynnunify.svg" alt="" width="600" height="360" loading="lazy" /></div>
+            </a>
+            <a
+              class="field"
+              data-project="seephyspro"
+              href="#research"
+              aria-label="Explore SeePhys Pro"
+              ><span class="field-number" aria-hidden="true">02</span>
+              <div class="field-content">
+                <h3 class="field-title">SeePhys Pro</h3>
+                <p class="field-description">
+                  <span class="field-copy-line">Four views. Same physics.</span
+                  ><span class="field-copy-line"
+                    >Does AI really use vision?</span
+                  >
+                </p>
+                <span class="field-venue">arXiv · 2026</span>
+              </div>
+              <div class="field-image">
+                <img
+                  src="assets/research-seephyspro.svg"
+                  alt=""
+                  width="600"
+                  height="360"
+                  loading="lazy"
+                /></div></a
+            ><a
+              class="field"
+              data-project="atomthink"
+              href="#research"
+              aria-label="Explore AtomThink"
+              ><span class="field-number" aria-hidden="true">03</span>
+              <div class="field-content">
+                <h3 class="field-title">AtomThink</h3>
+                <p class="field-description">
+                  <span class="field-copy-line">Think in atomic steps.</span
+                  ><span class="field-copy-line"
+                    >Adapt how long to reason.</span
+                  >
+                </p>
+                <span class="field-venue">TPAMI · 2026</span>
+              </div>
+              <div class="field-image">
+                <img
+                  src="assets/research-atomthink.svg"
+                  alt=""
+                  width="600"
+                  height="360"
+                  loading="lazy"
+                /></div></a
+            ><a
+              class="field"
+              data-project="seephys"
+              href="#research"
+              aria-label="Explore SeePhys"
+              ><span class="field-number" aria-hidden="true">04</span>
+              <div class="field-content">
+                <h3 class="field-title">SeePhys</h3>
+                <p class="field-description">
+                  <span class="field-copy-line">2,000 physics questions.</span
+                  ><span class="field-copy-line"
+                    >Does seeing help thinking?</span
+                  >
+                </p>
+                <span class="field-venue">NeurIPS · 2025</span>
+              </div>
+              <div class="field-image">
+                <img
+                  src="assets/research-seephys.svg"
+                  alt=""
+                  width="600"
+                  height="360"
+                  loading="lazy"
+                /></div></a
+            ><a
+              class="field"
+              data-project="physicalai"
+              href="#research"
+              aria-label="Explore Physical AI"
+              ><span class="field-number" aria-hidden="true">05</span>
+              <div class="field-content">
+                <h3 class="field-title">Physical AI</h3>
+                <p class="field-description">
+                  <span class="field-copy-line">Perceive. Reason. Model.</span
+                  ><span class="field-copy-line">Interact with the world.</span>
+                </p>
+                <span class="field-venue">TPAMI · 2026</span>
+              </div>
+              <div class="field-image">
+                <img
+                  src="assets/research-physicalai.svg"
+                  alt=""
+                  width="600"
+                  height="360"
+                  loading="lazy"
+                /></div
+            ></a>
+          </nav>
+        </div>
+      </section>
+      <section
+        class="publications section-pad"
+        id="publications"
+        aria-labelledby="pub-title"
+      >
+        <div class="section-kicker">
+          <span>04 / PUBLICATIONS</span
+          ><a
+            href="https://scholar.google.com/citations?user=geHeQVYAAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GOOGLE SCHOLAR ↗</a
+          >
+        </div>
+        <div class="section-heading">
+          <h2 id="pub-title">Publications.</h2>
+          <p>
+            Multimodal reasoning, physical intelligence, and learning systems.
+            Newest work first. * Equal contribution or core contributor, as noted per paper.
+          </p>
+        </div>
+        <div class="pub-controls">
+          <div
+            class="pub-filters"
+            role="group"
+            aria-label="Filter publications"
+          >
+            <button type="button" data-filter="all" aria-pressed="true">
+              <span>All</span>
+              <span class="filter-count"></span></button
+            ><button type="button" data-filter="journal" aria-pressed="false">
+              Journals</button
+            ><button
+              type="button"
+              data-filter="conference"
+              aria-pressed="false"
+            >
+              Conferences</button
+            ><button type="button" data-filter="preprint" aria-pressed="false">
+              Preprints
+            </button>
+            <button type="button" data-filter="workshop" aria-pressed="false">
+              Workshops
+            </button>
+          </div>
+          <label class="pub-search"
+            ><span aria-hidden="true">⌕</span
+            ><input
+              id="publication-search"
+              type="search"
+              placeholder="Search papers…"
+              aria-label="Search publications"
+          /></label>
+        </div>
+        <p
+          class="sr-only"
+          id="publication-status"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <div id="publication-list" class="publication-list"></div>
+        <p class="empty-state" id="publication-empty" hidden>
+          No matching papers. Try another keyword or filter.
+        </p>
+        <noscript
+          ><p>
+            Browse all publications on
+            <a href="https://scholar.google.com/citations?user=geHeQVYAAAAJ"
+              >Google Scholar</a
+            >
+            or the <a href="../index.html">original homepage</a>. Enable
+            JavaScript to use publication filters and project details.
+          </p></noscript
+        >
+      </section>
+      <section
+        class="background section-pad"
+        id="background"
+        aria-labelledby="background-title"
+      >
+        <div class="section-kicker">
+          <span>05 / BACKGROUND & COMMUNITY</span>
+        </div>
+        <div class="background-grid">
+          <div>
+            <h2 id="background-title">Learning, together.</h2>
+            <p class="background-intro">
+              Research is a shared pursuit. Some of the places and communities
+              that have shaped mine.
+            </p>
+            <div class="awards">
+              <h3 class="eyebrow">SELECTED HONORS</h3>
+              <p><span>Outstanding Graduate of SYSU</span><span>2024</span></p>
+              <p><span>National Scholarship</span><span>2022</span></p>
+              <p>
+                <span>Postgraduate Scholarship of SYSU</span><span>2021</span>
+              </p>
+            </div>
+          </div>
+          <div class="experience-list">
+            <h3 class="eyebrow">RESEARCH EXPERIENCE</h3>
+            <article class="experience">
+              <div>
+                <h4>Alibaba DAMO Academy</h4>
+                <span class="current-dot">CURRENT</span>
+              </div>
+              <p>Research Intern · May 2026 — Present</p>
+              <p>
+                <span>Working with</span>
+                <a
+                  href="https://lixin4ever.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Xin Li ↗</a
+                >
+              </p>
+            </article>
+            <article class="experience">
+              <div><h4>Huawei Noah’s Ark Lab</h4></div>
+              <p>Research Intern · Jul 2024 — May 2026</p>
+              <p>
+                <span>Working with</span>
+                <a
+                  href="https://hanjianhua44.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Jianhua Han</a
+                >
+                &
+                <a
+                  href="https://xuhangcn.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Hang Xu ↗</a
+                >
+              </p>
+            </article>
+            <article class="experience">
+              <div><h4>Sangfor Technologies</h4></div>
+              <p>Research Intern · Apr — Aug 2021</p>
+              <p>
+                <span>Working with</span>
+                <a
+                  href="https://www.jiangjingyan.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Jingyan Jiang ↗</a
+                >
+              </p>
+            </article>
+            <div class="academic-service">
+              <h3 class="eyebrow">ACADEMIC SERVICE</h3>
+              <p>
+                <span class="service-role">Organizer:</span
+                ><a
+                  href="https://ai4math2026.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >2nd / 3rd AI for Math Workshop @ ICML ↗</a
+                >
+              </p>
+              <p class="reviewer-service" tabindex="0"><span class="service-role">Reviewer:</span> NeurIPS, ICLR, ICML, ACL, AAAI, IEEE TNNLS, etc.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="contact section-pad"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="contact-heading">
+          <span class="eyebrow" aria-hidden="true">06 /</span>
+          <h2 id="contact-title">Contact.</h2>
+        </div>
+        <div class="contact-bottom">
+          <div class="email-line">
+            <a href="mailto:kun.xiang001@gmail.com">kun.xiang001@gmail.com</a
+            ><button
+              type="button"
+              id="copy-email"
+              aria-label="Copy email address"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <rect x="8" y="8" width="12" height="12" rx="1" />
+                <path d="M16 8V4H4v12h4" />
+              </svg></button
+            ><span
+              class="copy-feedback"
+              role="status"
+              id="copy-feedback"
+            ></span>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://scholar.google.com/citations?user=geHeQVYAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Scholar ↗</a
+            ><a
+              href="https://github.com/Kun-Xiang"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub ↗</a
+            ><a
+              href="https://www.linkedin.com/in/kun-xiang-449933367/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn ↗</a
+            ><a
+              href="https://orcid.org/0009-0006-5277-515X"
+              target="_blank"
+              rel="noopener noreferrer"
+              >ORCID ↗</a
+            ><a
+              href="https://dblp.org/pid/06/1955"
+              target="_blank"
+              rel="noopener noreferrer"
+              >DBLP ↗</a
+            >
+          </div>
+        </div>
+        <footer>
+          <span>© <span id="copyright-year">2026</span> KUN XIANG</span
+          ><a href="#home"><span>BACK TO TOP</span> ↑</a>
+        </footer>
+      </section>
+    </main>
+    <dialog
+      data-lenis-prevent
+      class="project-dialog"
+      id="project-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <div class="dialog-top">
+        <span class="eyebrow">A CLOSER LOOK / RESEARCH</span
+        ><button
+          class="dialog-close"
+          type="button"
+          aria-label="Close project details"
+        >
+          ×
+        </button>
+      </div>
+      <div id="dialog-content"></div>
+    </dialog>
+  </body>
+</html>
