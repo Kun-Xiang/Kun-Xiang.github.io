@@ -16,6 +16,8 @@ python3 -m http.server 4321 --bind 127.0.0.1
 
 Open http://127.0.0.1:4321/ for the public entry or http://127.0.0.1:4321/preview/ for the review preview. The public entry uses the same assets, scripts and data; the preview route remains `noindex`. Resource URLs in paper dialogs resolve relative to their source module, so they work from both entries.
 
+When editing point-cloud source files, first rebuild the checked-in `pointcloud.min.js` entry with the command in `preview/UPSTREAM.md`, then sync and check the homepage. The early point-cloud entry is independent of publication and scrolling modules.
+
 Push validated changes to `main` to publish. GitHub's existing Pages build and deployment workflow serves the site; `Check static site` validates the generated homepage, local assets, publication data and JavaScript syntax on pushes and pull requests.
 
 The existing `projects/`, `images/` and `css/` directories remain available at their original URLs. Reference-code provenance, source coverage and licenses are documented in `preview/UPSTREAM.md`, `preview/CONTENT_SOURCES.md`, `preview/RESEARCH_SOURCES.md` and `preview/licenses/`.

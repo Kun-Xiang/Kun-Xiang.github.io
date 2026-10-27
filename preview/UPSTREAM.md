@@ -39,3 +39,11 @@ npx --yes esbuild@0.28.2 preview/vendor/orocoa/home/vendor/three.planet.js --bun
 ```
 
 A module preload removes the serial renderer dependency fetch. `scripts/check_planet.mjs` checks finite coordinates, planet/ring coverage on phone budgets, surface normals, point count and determinism.
+
+The follow-up startup pass bundles the point-cloud entry, its Three.js exports and the worker generator into `home/pointcloud.min.js`. The page preloads and executes this entry independently of publication and scrolling modules. Its import map sends every point-cloud import to that same module instance. The generator runs inside a short-lived blob worker, removing its separate network request; the object URL is revoked after completion. Regenerate the entry with:
+
+```sh
+npx --yes esbuild@0.28.2 preview/vendor/orocoa/home/pointcloud.js --bundle --format=esm --target=es2022 --minify --legal-comments=inline --outfile=preview/vendor/orocoa/home/pointcloud.min.js
+```
+
+The earlier `three.planet.min.js` artifact is retained for previously cached page versions; the current entry does not request it.

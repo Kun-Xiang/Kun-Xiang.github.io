@@ -1,7 +1,8 @@
 import { phone } from '../assets/device-mode.js';
 import { palette } from '../vi/palette.js';
 const text = english => english;
-import * as THREE from './vendor/three.planet.min.js';
+import * as THREE from './vendor/three.planet.js';
+import { generatePlanet } from './assets/planet-worker.js';
 
 const canvas = document.querySelector('#cloud');
 const status = document.querySelector('#status');
@@ -384,8 +385,18 @@ function animate(now) {
 async function loadPlanet() {
   try {
     const generated = await new Promise((resolve, reject) => {
-      const worker = new Worker(new URL('./assets/planet-worker.js?v=20261027', import.meta.url), { type: 'module' });
-      const cleanup = () => { clearTimeout(timer); worker.terminate(); };
+      // The bundled generator is self-contained. A blob worker avoids another
+      // network round trip and keeps all generation work off the UI thread.
+      const workerCode = `self.onmessage = () => {
+        const started = performance.now();
+        const binary = (${generatePlanet.toString()})();
+        self.postMessage({ binary, points: 220000, generationMs: performance.now() - started }, [binary]);
+      };`;
+      const workerURL = URL.createObjectURL(new Blob([workerCode], { type: 'text/javascript' }));
+      let worker;
+      try { worker = new Worker(workerURL); }
+      catch (error) { URL.revokeObjectURL(workerURL); reject(error); return; }
+      const cleanup = () => { clearTimeout(timer); worker.terminate(); URL.revokeObjectURL(workerURL); };
       const timer = setTimeout(() => { cleanup(); reject(new Error('Planet worker timed out')); }, 5000);
       worker.onmessage = ({ data }) => { cleanup(); resolve(data); };
       worker.onerror = () => { cleanup(); reject(new Error('Planet worker unavailable')); };

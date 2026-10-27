@@ -71,7 +71,7 @@ export function generatePlanet() {
   return binary;
 }
 
-if (typeof self !== "undefined") {
+if (typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope) {
   self.onmessage = () => {
     const started = performance.now();
     const binary = generatePlanet();
