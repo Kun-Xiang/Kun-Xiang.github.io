@@ -1,7 +1,7 @@
 import { phone } from '../assets/device-mode.js';
 import { palette } from '../vi/palette.js';
 const text = english => english;
-import * as THREE from './vendor/three.module.js';
+import * as THREE from './vendor/three.planet.min.js';
 
 const canvas = document.querySelector('#cloud');
 const status = document.querySelector('#status');
@@ -379,32 +379,38 @@ function animate(now) {
   }
 }
 
+// Generate the mathematical model on a worker. The old binary remains a
+// fallback for browsers or extensions that block workers.
+async function loadPlanet() {
+  try {
+    const generated = await new Promise((resolve, reject) => {
+      const worker = new Worker(new URL('./assets/planet-worker.js?v=20261027', import.meta.url), { type: 'module' });
+      const cleanup = () => { clearTimeout(timer); worker.terminate(); };
+      const timer = setTimeout(() => { cleanup(); reject(new Error('Planet worker timed out')); }, 5000);
+      worker.onmessage = ({ data }) => { cleanup(); resolve(data); };
+      worker.onerror = () => { cleanup(); reject(new Error('Planet worker unavailable')); };
+      worker.postMessage('generate');
+    });
+    if (!(generated.binary instanceof ArrayBuffer) || generated.points !== DESKTOP_POINT_BUDGET || generated.binary.byteLength !== generated.points * 16)
+      throw new Error('Invalid generated geometry');
+    return { ...generated, source: 'worker' };
+  } catch {
+    const response = await fetch(new URL('./assets/ringed-planet.points.bin?v=20261026-flow', import.meta.url), { signal: AbortSignal.timeout(20000) });
+    if (!response.ok) throw new Error('Point-cloud fallback unavailable');
+    return { binary: await response.arrayBuffer(), points: DESKTOP_POINT_BUDGET, source: 'binary-fallback', generationMs: 0 };
+  }
+}
+
 async function init() {
   try {
     renderer = new THREE.WebGLRenderer({canvas,antialias:false,alpha:false,powerPreference:'high-performance'});
     renderer.setClearColor(palette['site-background'],1);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     scene = new THREE.Scene(); camera = new THREE.PerspectiveCamera(31,1,.1,40);
-    const signal = AbortSignal.timeout(20000);
-    const [mr,br] = await Promise.all([fetch(new URL('./assets/pointcloud.json?v=20261026-flow', import.meta.url), { signal }),fetch(new URL('./assets/ringed-planet.points.bin?v=20261026-flow', import.meta.url), { signal })]);
-    if (!mr.ok || !br.ok) throw new Error('点云资源读取失败');
-    const meta = await mr.json();
-    stats.loadingProgress = .08;
-    const expected = meta.points * 16;
-    const chunks = []; let received = 0;
-    if (br.body) {
-      const reader = br.body.getReader();
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        chunks.push(value); received += value.byteLength;
-        stats.loadingProgress = .08 + .7 * Math.min(1,received / expected);
-      }
-    } else { const value = new Uint8Array(await br.arrayBuffer()); chunks.push(value); received = value.byteLength; }
-    const bytes = new Uint8Array(received); let offset = 0;
-    for (const chunk of chunks) { bytes.set(chunk,offset); offset += chunk.byteLength; }
-    const binary = bytes.buffer;
-    if (binary.byteLength !== meta.points*16) throw new Error('点云文件不完整');
+    const { binary, points, source: origin, generationMs } = await loadPlanet();
+    const meta = { points };
+    Object.assign(canvas.dataset, { source: origin, generationMs: generationMs.toFixed(1) });
+    if (binary.byteLength !== meta.points * 16) throw new Error('Incomplete point-cloud geometry');
     // Retain the full desktop budget for immediate phone/desktop changes, but
     // do not decode or upload the source tail that no display mode can draw.
     const availablePoints = Math.min(meta.points,DESKTOP_POINT_BUDGET);
@@ -435,6 +441,7 @@ async function init() {
     // Resolve only after decoding, shader compilation and an actual first draw.
     if (renderer.info.programs.some(program => program.diagnostics?.runnable === false)) throw new Error('点云图形初始化失败');
     stats.frames=1; stats.ready=true; stats.loadingProgress=1; status.hidden=true;
+    Object.assign(canvas.dataset, { ready: 'true', points: String(count), readyMs: performance.now().toFixed(1) });
     lastTime=performance.now(); animationFrame=requestAnimationFrame(animate);
   } catch (error) {
     console.error(error); stats.errors.push(String(error)); status.hidden=false;

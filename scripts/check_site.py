@@ -93,7 +93,8 @@ def main():
     if (assets / meta['file']).stat().st_size != meta['points'] * 16:
         raise ValueError('Point-cloud geometry is incomplete')
     js_files = [ROOT / 'preview' / name for name in ('app.js', 'data.js', 'research.js', 'journey.js')]
-    js_files.append(ROOT / 'preview/vendor/orocoa/home/pointcloud.js')
+    js_files.extend(ROOT / 'preview/vendor/orocoa/home' / name for name in ('pointcloud.js', 'assets/planet-worker.js', 'vendor/three.planet.min.js'))
+    subprocess.run(['node', 'scripts/check_planet.mjs'], cwd=ROOT, check=True)
     for path in js_files:
         subprocess.run(['node', '--input-type=module', '--check'], input=path.read_text(), text=True, check=True)
     print(f'Checked both entry pages, {len(papers)} publications, local assets, point cloud and JS syntax.')

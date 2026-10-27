@@ -27,3 +27,15 @@ The original 16 publication records plus RynnUnify, the evidence-grounded five-p
 The pre-rebuild preview is preserved locally at `/tmp/kun-xiang-preview-before-source-rebuild/`. This is a development backup, not a second published website.
 
 The later 26 October refinement fixes the pointer radius at twice the original value, including fast movements; pointer velocity continues to shape force and tangential flow. On desktop, the selected-research grid uses a 1.15:2 column ratio, placing its numbered text-and-image list within approximately 52% of the viewport width. Tablet and phone stacking remains responsive. The About heading uses three explicit lines: “Building the”, “Reasoning Foundation”, and “of Physical AI”. Its final two lines are blue; print and forced-color modes use a solid text color.
+
+## Fast first render (27 October 2026)
+
+The normal path now generates the same mathematical body, ring bands, normals and reflectance model in `home/assets/planet-worker.js`, using a deterministic JavaScript seed and transferring the finished buffer off the worker without copying it. The exact random samples differ from Python's RNG; framing, density, lighting and pointer behavior are retained. The 3.52 MB Python-generated binary remains only as a compatibility fallback when workers fail or are blocked.
+
+`home/vendor/three.planet.js` lists the Three.js exports used by this renderer. Its checked-in `three.planet.min.js` is bundled from the existing r186 sources with esbuild 0.28.2, retaining license notices. Regenerate it with:
+
+```sh
+npx --yes esbuild@0.28.2 preview/vendor/orocoa/home/vendor/three.planet.js --bundle --format=esm --target=es2022 --minify --legal-comments=inline --outfile=preview/vendor/orocoa/home/vendor/three.planet.min.js
+```
+
+A module preload removes the serial renderer dependency fetch. `scripts/check_planet.mjs` checks finite coordinates, planet/ring coverage on phone budgets, surface normals, point count and determinism.
