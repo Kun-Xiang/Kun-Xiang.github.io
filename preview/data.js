@@ -2,6 +2,29 @@
 // PDF versions, evidence, and unresolved records: AUTHOR_AUDIT.md / author-audit.json.
 export const publications = [
   {
+    "id": "fetch-frame-focus",
+    "year": 2026,
+    "type": "conference",
+    "venue": "ACM MM · 2026",
+    "name": "Fetch, Frame, and Focus",
+    "title": "Fetch, Frame, and Focus: Retrieval-Augmented Panoramic-Spotlight Memory for Scalable Vector Graphics Generation",
+    "authors": [
+      "Qingman Wu",
+      "Hanhui Li",
+      "Xujie Zhang",
+      "Kun Xiang",
+      "Terry Jingchen Zhang",
+      "Xiaodan Liang"
+    ],
+    "summary": "Retrieval-augmented panoramic-spotlight memory for scalable vector graphics generation.",
+    "links": [
+      [
+        "Paper",
+        "https://doi.org/10.1145/3767308.3836103"
+      ]
+    ]
+  },
+  {
     "id": "rynnunify",
     "year": 2026,
     "type": "preprint",
