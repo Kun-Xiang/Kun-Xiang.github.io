@@ -1,4 +1,4 @@
-import { publications } from "./data.js?v=20261026-bee-flow";
+import { publications } from "./data.js?v=20261110-acm-mm";
 import { researchDetails } from "./research.js?v=20261026-authors";
 import { pageScroll } from "./vendor/orocoa/assets/page-scroll.js";
 import { ready, navigate, updateChapter } from "./journey.js?v=20261026-contact-simple";
